@@ -1,4 +1,5 @@
-from enum import Enum
+from characters import Character
+from main.Phase import Phase as Phase 
 
 class GameLoop:
     """
@@ -21,33 +22,33 @@ class GameLoop:
     -------------------------------------------------------------------------------
     """
     # Constructor
-    def __init__(self, characterOne, characterTwo):
+    def __init__(self, characterOne: Character, characterTwo: Character) -> None:
         """
         Constructs a GameLoop object with two characters.
         Args:
             characterOne (Character): the first character to run the game with
             characterTwo (Character): the second character to run the game with
         """
-        self._firstChar = characterOne
-        self._secondChar = characterTwo
-        self._turnChar = self._firstChar
-        self._phase = Enum('Phase', [('UPKEEP', 1), ('INCOME', 2), ('FIRST_MAIN', 3), 
-                                     ('OFFENSIVE_ROLL', 4), ('TARGETING', 5), 
-                                     ('DEFENSIVE_ROLL', 6), ('SECOND_MAIN', 7),
-                                     ('DISCARD', 8)])
+        self._firstChar: Character = characterOne
+        self._secondChar: Character = characterTwo
+        self._turnChar: Character = self._firstChar
+        self._phase = Phase
 
     # Methods
-    def run(self):
+    def run(self) -> None:
         """
         Runs the gameloop until a character has been reduced to 0 hp.
         """
         while (self.firstChar.getHp() > 0 and self.secondChar.getHp() > 0):
-            self.firstChar.setHp(0) # Unimplemented loop
+            return None # Not currently implemented
 
             # Upkeep Phase
             self._phase.UPKEEP
+            self._firstChar.phaseTrigger(self._phase)
+            self._secondChar.phaseTrigger(self._phase)
 
             # Income Phase
             self._phase.INCOME
+            # TODO run a method to check for abilites that trigger during upkeep
             self._turnChar.setCp(self._turnChar.getCp() + 1)
             self._turnChar.draw(1)

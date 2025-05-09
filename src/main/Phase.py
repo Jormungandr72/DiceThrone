@@ -5,22 +5,21 @@ class Phase(Enum):
     -------------------------------------------------------------------------------
     Program:    Phase.py
     Author:     Patrick J. McGranahan
-    Date:       04.25.2025
+    Date:       04.29.2025
     Language:   python
-    Purpose:    The purpose of this code is to serve as an enumerated class 
-                representing the phases of the game.
+    Purpose:    The purpose of this enumerated class is to represent phases in the
+                dice throne program.
     -------------------------------------------------------------------------------
     Change Log:
     Who  When           What
-    PJM  04.25.2025     Added all phases to the class.
-    PJM  04.25.2025     Created class Phase and imported Enum.
+    PJM  04.29.2025     Created Phase.py, added all phases.
     -------------------------------------------------------------------------------
     """
-    UPKEEP = "UPKEEP"
-    INCOME = "INCOME"
-    FIRST_MAIN = "FIRST_MAIN"
-    OFFENSIVE_ROLL = "OFFENSIVE_ROLL"
-    TARGETING = "TARGETING"
-    DEFENSIVE_ROLL = "DEFENSIVE_ROLL"
-    SECOND_MAIN = "SECOND_MAIN"
-    DISCARD = "DISCARD"
+    UPKEEP = 1
+    INCOME = 2
+    FIRST_MAIN = 3
+    OFFENSIVE_ROLL = 4
+    TARGETING = 5
+    DEFENSIVE_ROLL = 6
+    SECOND_MAIN = 7
+    DISCARD = 8
