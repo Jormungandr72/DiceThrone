@@ -15,6 +15,8 @@ class Character(ABC):
     -------------------------------------------------------------------------------
     Change Log:
     Who  When           What
+    PJM  04.29.2025     Updated phase trigger methods with a pass statement and
+                        a comment that describes what to do. 
     PJM  04.29.2025     Added methods to trigger on different phases.
     PJM  04.29.2025     Added type annotations.
     PJM  04.25.2025     Updated the draw method with parameter numToDraw.
@@ -103,6 +105,7 @@ class Character(ABC):
         """
         Shuffles the character's deck.
         """
+        Random.shuffle(self._deck)
 
     def loadDeck(self, deck_json: json) -> None:
         """
@@ -111,13 +114,13 @@ class Character(ABC):
         Args:
             deck_json (json): the character-specific deck to load
         """
-        pass # TODO implement based on abstracted methods
+        pass # TODO implement based on character-specifc json
 
     def loadGenericDeck(self):
         """
         Adds all cards shared across characters to the character's deck.
         """
-        
+        pass # TODO implement based on generic_deck.json
 
     def phaseTrigger(self, phase: Phase) -> bool:
         """
@@ -155,6 +158,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
 
     @abstractmethod
     def incomeTrigger() -> bool:
@@ -164,6 +168,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
 
     @abstractmethod
     def firstMainTrigger() -> bool:
@@ -173,6 +178,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
 
     @abstractmethod
     def offensiveRollTrigger() -> bool:
@@ -182,6 +188,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
         
     @abstractmethod
     def targetingTrigger() -> bool:
@@ -191,6 +198,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
 
     @abstractmethod
     def defensiveRollTrigger() -> bool:
@@ -200,6 +208,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
 
     @abstractmethod
     def secondMainTrigger() -> bool:
@@ -209,6 +218,7 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json
 
     @abstractmethod
     def discardTrigger() -> bool:
@@ -218,3 +228,4 @@ class Character(ABC):
         Returns:
             bool: {True} if a skill was triggered; {False} otherwise
         """
+        pass # TODO implement based on character-specifc json

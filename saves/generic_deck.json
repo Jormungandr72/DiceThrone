@@ -1,0 +1,13 @@
+{
+    "character_name": "all",
+    "total_cards": 1,
+    "cards": {
+        "getting_paid": {
+            "card_id": "1",
+            "card_name": "Getting Payed!",
+            "card_speed": "instant",
+            "card_cost": 0,
+            "card_effect": "Gain 2 cp."
+        }
+    }
+}
