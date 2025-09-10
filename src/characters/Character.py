@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from random import Random
-from main.Phase import Phase as Phase
+from src.main.Phase import Phase as Phase
 import json
 
 class Character(ABC):
